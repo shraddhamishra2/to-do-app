@@ -24,7 +24,7 @@ const Task = () => {
     <div>
       <div className="tasks-outer">
         <div className="tasks-header">
-          Good Morning, <h3>{name}</h3>!
+          Good Afternoon, <h3>{name}</h3>!
         </div>
         <div className="tasks-container">
           {tasks &&
