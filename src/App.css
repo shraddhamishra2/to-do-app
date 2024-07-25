@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #09050d;
+  color: white;
+  font-family: "Poppins", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.auth-outer-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+  gap: 50px;
+}
+.card {
+  background: radial-gradient(circle, #09050d, #211230);
+  padding: 12px;
+  border-radius: 12px;
+  width: 310px;
+}
+input {
+  border: none;
+  background-color: #ab71f41c;
+  width: 100%;
+  padding: 10px;
+  color: rgb(226, 220, 241);
+  font-size: 12px;
+}
+.auth-header-container {
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+}
+.auth-heading {
+  font-size: x-large;
+  font-weight: 700;
+}
+.auth-sub-heading {
+  font-weight: 200;
+}
+::placeholder {
+  color: rgba(222, 189, 239, 0.4);
+}
+.primary-text,
+.label {
+  color: #ab71f4;
+}
+.primary-text {
+  font-weight: 600;
+  cursor: pointer;
+}
+.small-text,
+.label {
+  font-size: 12px;
+}
+.small-text {
+  font-weight: 200;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+button {
+  background-color: #ab71f4;
+  border-radius: 10px;
+  border: none;
+  padding: 8px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  width: 40%;
+  margin: auto;
+  cursor: pointer;
 }
