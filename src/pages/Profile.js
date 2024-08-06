@@ -30,7 +30,7 @@ const Profile = () => {
         <div className="profile-picture">
           <div className="outer-ellipse">
             <div className="profile-image">
-              <img src={profilePicture} alt="Profile Picture" />
+              <img src={profilePicture} alt="Profile" />
             </div>
           </div>
         </div>

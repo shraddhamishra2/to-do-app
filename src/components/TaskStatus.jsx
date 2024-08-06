@@ -83,6 +83,7 @@ const TaskStatus = ({ tasks, setFilteredTask, filterType, reverseTask }) => {
   };
   useEffect(() => {
     toggleKey ? sortTaskAscending(sortType) : sortTaskDescending(sortType);
+    //eslint-disable-next-line
   }, [toggleKey, sortType]);
   return (
     <div className="status-task-container">

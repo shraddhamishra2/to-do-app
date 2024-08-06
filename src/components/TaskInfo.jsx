@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { RiFlag2Line } from "react-icons/ri";
 import Checkbox from "../assets/CheckboxEmpty.png";
 import CheckboxFilled from "../assets/Checkbox.png";
@@ -9,8 +8,7 @@ import { url } from "../utils";
 const TaskInfo = ({ tasks, setRefresh, setFilterType }) => {
   const handleCheckboxClick = async (id) => {
     try {
-      const response = await axios.put(`${url}task/status/${id}`);
-      // console.log(("response: ", response));
+      await axios.put(`${url}task/status/${id}`);
       setFilterType("all");
       setRefresh((prev) => !prev);
     } catch (error) {

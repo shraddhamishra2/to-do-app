@@ -28,9 +28,7 @@ const TaskDetail = () => {
   }
   const handleDelete = async () => {
     try {
-      const res = await axios.delete(
-        `${url}task/delete/${location?.state._id}`
-      );
+      await axios.delete(`${url}task/delete/${location?.state._id}`);
       alert("Task deleted");
       navigate("/task");
     } catch (error) {

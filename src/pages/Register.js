@@ -15,7 +15,7 @@ const Register = () => {
     e.preventDefault();
     if (password === cpassword) {
       try {
-        const res = await axios
+        await axios
           .post("https://task-manager-server-chi-three.vercel.app/user/add", {
             emailId: email,
             name: username,

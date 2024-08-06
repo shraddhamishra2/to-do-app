@@ -4,7 +4,7 @@ import TaskHeader from "../components/TaskHeader";
 import SearchBar from "../components/SearchBar";
 import TaskInfo from "../components/TaskInfo";
 import TaskStatus from "../components/TaskStatus";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { url } from "../utils";
 
 const Task = () => {
@@ -16,9 +16,6 @@ const Task = () => {
   const userEmail = localStorage.getItem("useremail");
   const name = localStorage.getItem("name");
   const navigate = useNavigate();
-  const location = useLocation();
-  // console.log("Location: ", location.state);
-  // console.log("Tasks: ", tasks);
   const reverseTask = () => {
     const reversedTask = filteredTask.reverse();
     setFilteredTask(() => reversedTask);
@@ -29,13 +26,11 @@ const Task = () => {
     try {
       setShowLoader(true);
       await new Promise((resolve) => setTimeout(resolve, 1500));
-      const res = await axios
-        .get(`${url}task/user/${userEmail}`)
-        .then((item) => {
-          setTasks(item?.data);
-          setFilteredTask(item?.data);
-          setShowLoader(false);
-        });
+      await axios.get(`${url}task/user/${userEmail}`).then((item) => {
+        setTasks(item?.data);
+        setFilteredTask(item?.data);
+        setShowLoader(false);
+      });
     } catch (error) {
       console.log(error);
       setShowLoader(false);
@@ -43,6 +38,7 @@ const Task = () => {
   };
   useEffect(() => {
     fetchTasks();
+    //eslint-disable-next-line
   }, [refresh]);
   return (
     <div>

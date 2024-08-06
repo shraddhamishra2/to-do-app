@@ -8,8 +8,6 @@ const TaskHeader = (props) => {
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
   };
-  // console.log(props);
-  const navigate = useNavigate();
 
   return (
     <div className="greetingHeader">
