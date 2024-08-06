@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { SlSettings } from "react-icons/sl";
-import { useNavigate } from "react-router-dom";
 import Dropdown from "./Dropdown";
 
 const TaskHeader = (props) => {
